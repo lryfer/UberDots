@@ -7,13 +7,13 @@ set $term foot
 set $menu tofi-drun | xargs swaymsg exec --
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+gaps inner 8
+gaps outer 8
+client.focused_tab_title #2e2b29 #2e2b29 #a3998e #2e2b29 #2e2b29
+default_border none 
+default_floating_border none
+for_window [title="^.*"] title_format ""
+
 input "1739:0:Synaptics_TM3276-022" {
 	dwt enabled
 	tap enabled
@@ -154,5 +154,10 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+bar {
+    swaybar_command waybar
+    mode hide
+}
 
 include /etc/sway/config.d/*

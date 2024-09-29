@@ -43,7 +43,7 @@
     },
     "clock": {
         "interval": 60,
-        "format": "{:%I:%M %p}", // %b %d %Y  --Date formatting
+        "format": "{:%I:%M %p}", 
         "tooltip-format": "<big>{:%d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },

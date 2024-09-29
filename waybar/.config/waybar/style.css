@@ -9,6 +9,7 @@
 
 window#waybar {
   color: @text;
+  background-color: transparent;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -72,7 +73,7 @@ button:hover {
   color: @red;
 }
 #workspaces button.empty {
-  color: @surface2;
+  color: @red;
 }
 
 #workspaces button.active {
