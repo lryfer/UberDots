@@ -1,0 +1,136 @@
+@import "gmk9009.css";
+
+* {
+  min-height: 0;
+  font-family: "BigBlueTermPlus Nerd Font";
+  font-size: 12px;
+
+}
+
+window#waybar {
+  color: @text;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.empty {
+  opacity: 1;
+}
+
+.modules-left {
+  border: 2px solid @green;
+  background: @crust; 
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px; 
+}
+
+.modules-right {
+  border: 2px solid @green;
+  background: @crust; 
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px; 
+}
+
+.modules-center {
+  border: none;
+}
+
+button {
+  border: none;
+  border-radius: 0;
+}
+
+button:hover {
+  background: @base;
+}
+
+#custom-power {
+  color: @text;
+  font-weight: 600;
+  padding-left: 15px;
+  padding-right: 10px;
+  background: @crust
+}
+
+#workspaces {
+  font-weight: 600;
+  padding: 5px 10px;
+  background: @crust
+}
+
+
+#workspaces button {
+  color: @text;
+  font-weight: 600;
+  margin: 0px;
+  padding: 0px 5px;
+}
+
+#workspaces button.urgent {
+  color: @red;
+}
+#workspaces button.empty {
+  color: @surface2;
+}
+
+#workspaces button.active {
+  color: @text;
+}
+
+#workspaces button.focused {
+  color: @green;
+}
+
+#battery,
+#battery#sec,
+#cpu,
+#temperature,
+#memory,
+#disk {
+  color: @text;
+  font-weight: 600;
+  padding: 4px 13px;
+  background: @crust
+}
+
+#pulseaudio {
+  color: @text;
+  font-weight: 600;
+  padding: 6px 10px;
+  background: @crust
+}
+
+#network {
+  color: @text;
+  font-weight: 600;
+  margin-right: 2px;
+  padding: 6px 6px;
+  background: @crust
+}
+
+#tray {
+  color: @text;
+  font-weight: 600;
+  padding: 6px 15px;
+  background: @crust
+}
+
+#clock {
+  color: @text;
+  font-weight: 600;
+  padding: 6px 10px;
+  background: @crust
+}
+
+#custom-sepp {
+    color: @surface2;
+    font-size: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#network.disconnected {
+  background-color: @red;
+}

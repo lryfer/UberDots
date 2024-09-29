@@ -1,0 +1,99 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-top": 0,
+    "spacing": 1,
+    "modules-left": ["sway/workspaces"],
+    "modules-center":[],
+    "modules-right": ["clock", "battery", "battery#sec", "pulseaudio", "network", "tray"],
+
+    "sway/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10"
+         },
+    },
+    "battery": {
+      "bat": "BAT0",
+      "format": "{capacity}% {icon}",
+      "format-icons": ["", "", "", "", ""],
+    },
+    "battery#sec": {
+      "bat": "BAT1",
+      "format": "{capacity}% {icon}",
+      "max-length": 25,
+      "format-icons": ["", "", "", "", ""],
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 5,
+        "show-passive-items": true,
+    },
+    "clock": {
+        "interval": 60,
+        "format": "{:%I:%M %p}", // %b %d %Y  --Date formatting
+        "tooltip-format": "<big>{:%d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+   "temperature": {
+        "critical-threshold": 80,
+        "interval": 2,
+        "format": " {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 2,
+        "format": "  {}%"
+    },
+   "disk": {
+        "interval": 15,
+        "format": "󰋊 {percentage_used}%",
+    },
+    "network": {
+        "format-wifi": " ",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "tooltip-format-wifi": "{ipaddr} - {essid} ({signalStrength}%) ",
+        "tooltip-format": "{ipaddr} - {ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "nm-connection-editor"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}% 󰂯",
+        "format-bluetooth-muted": "󰖁 {icon} 󰂯",
+        "format-muted": "󰖁 {format_source} ",
+        "format-source": "{volume} % ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󱡒",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/sepp": {
+        "format": "|"
+    },
+}
