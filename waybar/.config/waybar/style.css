@@ -82,12 +82,12 @@ button:hover {
 #temperature,
 #memory,
 #disk {
-  color: @winterGreen;
+  color: @springBlue;
   font-weight: 600;
   margin-right: 10px;
   padding: 4px 12px; 
   border-radius: 90px;
-  background: @sumiInk4;
+  background: @winterBlue;
 }
 
 #pulseaudio {
