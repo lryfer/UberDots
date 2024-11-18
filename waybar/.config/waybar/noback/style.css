@@ -86,7 +86,7 @@ button:hover {
 #temperature,
 #memory,
 #disk {
-  color: @blue;
+  color: @springGreen;
   font-weight: 600;
   margin-right: 10px;
   padding: 6px 15px;
@@ -104,12 +104,12 @@ button:hover {
 }
 
 #network {
-  color: @crust;
+  color: @springGreen;
   font-weight: 600;
   margin-right: 10px;
   padding: 6px 15px;
   border-radius: 90px;
-  background: @green
+  background: @springGreen
 }
 
 #tray {

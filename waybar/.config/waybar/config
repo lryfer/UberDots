@@ -5,10 +5,12 @@
     "margin-right": 0,
     "margin-top": 0,
     "spacing": 1,
+    "padding": 5,  // Riduci il padding della barra
+    "font-size": 10,  // Riduci la dimensione del font
     "modules-left": ["sway/workspaces"],
-    "modules-center":[],
+    "modules-center": [],
     "modules-right": ["clock", "battery", "battery#sec", "pulseaudio", "network", "tray"],
-
+    
     "sway/workspaces": {
         "on-click": "activate",
         "format": "{icon}",
@@ -23,23 +25,23 @@
             "8": "8",
             "9": "9",
             "10": "10"
-         },
+        }
     },
     "battery": {
-      "bat": "BAT0",
-      "format": "{capacity}% {icon}",
-      "format-icons": ["", "", "", "", ""],
+        "bat": "BAT0",
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
     },
     "battery#sec": {
-      "bat": "BAT1",
-      "format": "{capacity}% {icon}",
-      "max-length": 25,
-      "format-icons": ["", "", "", "", ""],
+        "bat": "BAT1",
+        "format": "{capacity}% {icon}",
+        "max-length": 25,
+        "format-icons": ["", "", "", "", ""]
     },
     "tray": {
         "icon-size": 18,
         "spacing": 5,
-        "show-passive-items": true,
+        "show-passive-items": true
     },
     "clock": {
         "interval": 60,
@@ -47,11 +49,11 @@
         "tooltip-format": "<big>{:%d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
-   "temperature": {
+    "temperature": {
         "critical-threshold": 80,
         "interval": 2,
         "format": " {temperatureC}°C",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
     "cpu": {
         "interval": 2,
@@ -62,17 +64,17 @@
         "interval": 2,
         "format": "  {}%"
     },
-   "disk": {
+    "disk": {
         "interval": 15,
         "format": "󰋊 {percentage_used}%",
     },
     "network": {
         "format-wifi": " ",
-        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-ethernet": "󰈀 {ipaddr}/{cidr}",
         "tooltip-format-wifi": "{ipaddr} - {essid} ({signalStrength}%) ",
-        "tooltip-format": "{ipaddr} - {ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "tooltip-format": "{ipaddr} - {ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP) 󱚵",
+        "format-disconnected": "󰖪",
         "on-click": "nm-connection-editor"
     },
     "pulseaudio": {
@@ -95,5 +97,5 @@
     },
     "custom/sepp": {
         "format": "|"
-    },
+    }
 }

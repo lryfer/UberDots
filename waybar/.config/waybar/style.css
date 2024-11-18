@@ -1,41 +1,28 @@
-@import "gmk9009.css";
+@import "kanagawa.css";
 
 * {
   min-height: 0;
-  font-family: "BigBlueTermPlus Nerd Font";
-  font-size: 12px;
-
+  font-family: "Martian Mono Nerd Font";
+  font-size: 14px; /* Ridotto la dimensione del font */
 }
 
 window#waybar {
-  color: @text;
-  background-color: transparent;
+  color: @sumiInk4;
+  background: @sumiInk1;
   transition-property: background-color;
   transition-duration: 0.5s;
+  border-radius: 0px;
 }
 
 window#waybar.empty {
-  opacity: 1;
+  opacity: 0.3;
 }
 
-.modules-left {
-  border: 2px solid @green;
-  background: @crust; 
-  margin-left: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px; 
-}
-
-.modules-right {
-  border: 2px solid @green;
-  background: @crust; 
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-right: 10px; 
-}
-
+.modules-left,
+.modules-right,
 .modules-center {
   border: none;
+  padding: 3px 5px; 
 }
 
 button {
@@ -44,44 +31,49 @@ button {
 }
 
 button:hover {
-  background: @base;
+  background: @sumiInk4;
+  border-radius: 90px;
 }
 
 #custom-power {
-  color: @text;
+  color: @carpYellow;
   font-weight: 600;
-  padding-left: 15px;
-  padding-right: 10px;
-  background: @crust
+  margin-right: 10px;
+  padding-left: 12px; 
+  padding-right: 15px; 
+  border-radius: 90px;
+  background: @sumiInk4;
 }
 
 #workspaces {
   font-weight: 600;
-  padding: 5px 10px;
-  background: @crust
+  margin-right: 10px;
+  padding: 3px 8px; /* Ridotto il padding */
+  border-radius: 90px;
+  background: @sumiInk2;
 }
 
-
 #workspaces button {
-  color: @text;
+  color: @oniViolet;
   font-weight: 600;
   margin: 0px;
   padding: 0px 5px;
 }
 
 #workspaces button.urgent {
-  color: @red;
+  color: @peachRed;
 }
+
 #workspaces button.empty {
-  color: @red;
+  color: @waveAqua2;
 }
 
 #workspaces button.active {
-  color: @text;
+  color: @crystalBlue;
 }
 
 #workspaces button.focused {
-  color: @green;
+  color: @sakuraPink;
 }
 
 #battery,
@@ -90,48 +82,56 @@ button:hover {
 #temperature,
 #memory,
 #disk {
-  color: @text;
+  color: @winterGreen;
   font-weight: 600;
-  padding: 4px 13px;
-  background: @crust
+  margin-right: 10px;
+  padding: 4px 12px; 
+  border-radius: 90px;
+  background: @sumiInk4;
 }
 
 #pulseaudio {
-  color: @text;
+  color: @oniViolet;
   font-weight: 600;
-  padding: 6px 10px;
-  background: @crust
+  margin-right: 10px;
+  padding: 4px 12px; 
+  border-radius: 90px;
+  background: @winterBlue;
 }
 
 #network {
-  color: @text;
+  color: @sakuraPink;
   font-weight: 600;
-  margin-right: 2px;
-  padding: 6px 6px;
-  background: @crust
+  margin-right: 10px;
+  padding: 4px 12px; 
+  border-radius: 90px;
+  background: @sumiInk4;
 }
 
 #tray {
   color: @text;
   font-weight: 600;
-  padding: 6px 15px;
-  background: @crust
+  padding: 4px 12px; 
+  border-radius: 90px;
+  background: @sumiInk4;
 }
 
 #clock {
-  color: @text;
+  color: @sakuraPink;
   font-weight: 600;
-  padding: 6px 10px;
-  background: @crust
+  margin-right: 10px;
+  padding: 4px 12px; 
+  border-radius: 90px;
+  background: @sumiInk4;
 }
 
 #custom-sepp {
-    color: @surface2;
-    font-size: 20px;
-    padding-left: 0px;
-    padding-right: 0px;
+  color: @surface2;
+  font-size: 18px; 
+  padding-left: 3px; 
+  padding-right: 8px; 
 }
 
 #network.disconnected {
-  background-color: @red;
+  background-color: @peachRed;
 }
