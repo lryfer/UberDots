@@ -15,13 +15,21 @@ default_floating_border none
 for_window [title="^.*"] title_format ""
 
 # main setup screen specific settings
-output DP-2 mode 1920x1080@143.999Hz position 0,900
-output HDMI-A-1 mode 1920x1080@100.000Hz position 1920,900
-output HDMI-A-2 mode 1600x900@60.000Hz position 2050,0
+output DP-2 mode 1920x1080@143.999Hz position 0,0
+output HDMI-A-1 mode 1920x1080@100.000Hz position 1920,0
 workspace 1 output DP-2
 workspace 2 output HDMI-A-1
-workspace 3 output HDMI-A-2
 
+input 1133:50503:Logitech_USB_Receiver {
+    natural_scroll disabled
+    dwt enabled
+    accel_profile "flat" # disable mouse acceleration (enabled by    default; to set it manually, use "adaptive" instead of "flat")
+    pointer_accel 0.1 # set mouse sensitivity (between -1 and 1)
+} 
+
+input type:keyboard {
+    xkb_options grp:rctrl_toggle
+}
 # thinkpad t480 relative trackpad settings
 input "1739:0:Synaptics_TM3276-022" {
 	dwt enabled
