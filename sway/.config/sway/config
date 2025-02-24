@@ -50,6 +50,10 @@ input "1739:0:Synaptics_TM3276-022" {
     # Start your launcher
     bindsym $mod+p exec $menu
 
+    # Change brightness of the display 
+    bindsym $mod+u exec brightnessctl -d intel_backlight s 100+
+    bindsym $mod+d exec brightnessctl -d intel_backlight s 100-
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
