@@ -1,4 +1,4 @@
-# 9009_sway_dots
+# UberDots
 
 installation:
 stow -v --target=/home/$USER */
