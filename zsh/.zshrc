@@ -33,7 +33,7 @@ autoload -Uz compinit && compinit
 if [[ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
-# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+
 if [[ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
   source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
@@ -41,18 +41,26 @@ fi
 
 
 function zle-keymap-select {
-  if [[ $KEYMAP == vicmd ]]; then
-    PROMPT='%B%F{magenta} < %f%b'  # Modalità normale
-  else
-    PROMPT='%B%F{magenta} > %f%b'  # Modalità inserimento
+  local path_part
+  if [[ "$PWD" == "$HOME" ]]; then 
+    path_part=""
+  else 
+    path_part="${PWD/#$HOME/~}"
+    path_part="${path_part/#\~\//}"
+    path_part="${path_part%/}"
+    path_part="$path_part "
   fi
-  zle reset-prompt  # Forza l'aggiornamento del prompt
+  if [[ $KEYMAP == vicmd ]]; then
+    PROMPT="%B%F{magenta}${path_part} < %f%b"  
+  else
+    PROMPT="%B%F{magenta}${path_part} > %f%b"  
+  fi
+  zle reset-prompt 
 }
 
 function zle-line-init {
-  zle-keymap-select  # Assicura che il prompt sia corretto all’inizio
+  zle-keymap-select 
 }
 
-# Collega le funzioni agli eventi ZLE
 zle -N zle-keymap-select
 zle -N zle-line-init
