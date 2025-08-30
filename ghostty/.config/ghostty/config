@@ -1,0 +1,58 @@
+window-decoration = server
+window-inherit-working-directory = true
+window-theme = dark
+window-save-state = always
+
+mouse-hide-while-typing = true
+copy-on-select = true
+
+background = #1f1f28
+background-opacity = 1
+
+font-family = Iosevka Nerd Font
+font-size = 13
+cursor-style = block
+
+foreground = #dcd7ba
+selection-foreground = #dcd7ba
+selection-background = #2d4f67
+cursor-color = #dc8a78
+
+palette = 0=#16161d
+palette = 1=#e82424
+palette = 2=#98bb6c
+palette = 3=#dca561
+palette = 4=#7e9cd8
+palette = 5=#957fb8
+palette = 6=#6a9589
+palette = 7=#dcd7ba
+palette = 8=#2a2a37
+palette = 9=#e82424
+palette = 10=#98bb6c
+palette = 11=#dca561
+palette = 12=#7e9cd8
+palette = 13=#957fb8
+palette = 14=#6a9589
+palette = 15=#c8c093
+palette = 16=#fe640b
+palette = 17=#dc8a78
+
+
+keybind = ctrl+v=new_split:right       
+keybind = ctrl+s=new_split:down        
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+l=goto_split:right
+keybind = ctrl+z=toggle_split_zoom
+
+keybind = ctrl+left=resize_split:left,10
+keybind = ctrl+right=resize_split:right,10
+keybind = ctrl+up=resize_split:up,10
+keybind = ctrl+down=resize_split:down,10
+
+keybind = ctrl+t=new_tab
+keybind = ctrl+e=close_tab
+keybind = ctrl+tab=next_tab
+keybind = ctrl+shift+tab=previous_tab
+keybind = ctrl+r=reload_config
